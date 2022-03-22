@@ -21,6 +21,7 @@ import kotlin.io.path.listDirectoryEntries
 import kotlin.io.path.readText
 import kotlin.io.path.relativeTo
 import kotlin.io.path.writeText
+import kotlin.streams.asSequence
 import kotlin.system.exitProcess
 
 fun runInitMode() {
@@ -132,6 +133,12 @@ private fun Path.handleReplacements(root: Path, replacements: List<ReplacementNo
     val entries = listDirectoryEntries()
     for (entry in entries) {
         val relativePath = entry.relativeTo(root)
+        if (relativePath == Path("template")) {
+            Files.walk(entry)
+                .sorted(Comparator.reverseOrder())
+                .forEach { it.deleteExisting() }
+            continue
+        }
         val originalRelativePathString = relativePath.toString()
         if (entry.isRegularFile() && entry.isReadable() && entry.isWritable()) {
             println(buildString {
