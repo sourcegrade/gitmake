@@ -24,7 +24,7 @@ import org.fusesource.jansi.Ansi
 const val TEMPLATE_CONFIG_PATH = "template/config.json"
 
 fun main() {
-    runInitMode()
+    runReplacer()
 }
 
 fun encodeThrowable(e: Throwable): Nothing {
