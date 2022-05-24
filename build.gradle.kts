@@ -15,7 +15,7 @@ repositories {
     maven("https://jitpack.io")
 }
 
-val serializationVersion = "1.3.2"
+val serializationVersion = "1.3.3"
 
 dependencies {
     implementation("com.github.kotlin-inquirer:kotlin-inquirer:0.1.0")
