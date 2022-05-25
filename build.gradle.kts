@@ -1,10 +1,11 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+@Suppress("DSL_SCOPE_VIOLATION") // https://youtrack.jetbrains.com/issue/KTIJ-19369
 plugins {
     application
-    kotlin("jvm") version "1.6.20-M1"
-    kotlin("plugin.serialization") version "1.6.20-M1"
-    id("com.github.johnrengelman.shadow") version "7.1.2"
+    alias(libs.plugins.kotlin.jvm)
+    alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.shadow)
 }
 
 group = "org.sourcegrade"
@@ -15,13 +16,11 @@ repositories {
     maven("https://jitpack.io")
 }
 
-val serializationVersion = "1.3.2"
-
 dependencies {
-    implementation("com.github.kotlin-inquirer:kotlin-inquirer:0.1.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$serializationVersion")
-    implementation("org.fusesource.jansi:jansi:2.4.0")
-    implementation("com.google.guava:guava:31.1-jre")
+    implementation(libs.inquirer)
+    implementation(libs.serialization)
+    implementation(libs.jansi)
+    implementation(libs.guava)
 }
 
 application {
