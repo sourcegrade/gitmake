@@ -17,10 +17,12 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.sourcegrade.gitmake
+package org.sourcegrade.gitmake.template
 
 import com.github.kinquirer.KInquirer
 import com.github.kinquirer.components.promptInput
+import org.sourcegrade.gitmake.runCmdBlocking
+import org.sourcegrade.gitmake.toAnsi
 import java.nio.file.Path
 
 fun Path.initTemplate(): String {

@@ -17,12 +17,18 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.sourcegrade.gitmake
+package org.sourcegrade.gitmake.template
 
 import com.google.common.graph.Graph
 import com.google.common.graph.GraphBuilder
 import com.google.common.graph.Graphs
 import kotlinx.serialization.Serializable
+import org.sourcegrade.gitmake.Placeholder
+import org.sourcegrade.gitmake.PlaceholderConfig
+import org.sourcegrade.gitmake.ResolvedPlaceholder
+import org.sourcegrade.gitmake.encodeThrowable
+import org.sourcegrade.gitmake.resolve
+import org.sourcegrade.gitmake.toAnsi
 
 interface Template {
     val name: String
@@ -42,6 +48,7 @@ fun Template.resolve(): ResolvedTemplate {
         }
         println("Resolution graph has cycle".toAnsi { fgRed() })
     }
+    println("Successfully resolved template".toAnsi { fgGreen() })
     return resolvedTemplate
 }
 

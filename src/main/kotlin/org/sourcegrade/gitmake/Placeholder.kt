@@ -23,6 +23,7 @@ import com.github.kinquirer.KInquirer
 import com.github.kinquirer.components.promptConfirm
 import com.github.kinquirer.components.promptInput
 import kotlinx.serialization.Serializable
+import org.sourcegrade.gitmake.template.Template
 
 interface Placeholder {
     val name: String

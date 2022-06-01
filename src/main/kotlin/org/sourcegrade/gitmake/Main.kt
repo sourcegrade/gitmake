@@ -20,6 +20,8 @@
 package org.sourcegrade.gitmake
 
 import org.fusesource.jansi.Ansi
+import org.sourcegrade.gitmake.template.ReplacementNode
+import org.sourcegrade.gitmake.template.runInitMode
 
 const val TEMPLATE_CONFIG_PATH = "template/config.json"
 

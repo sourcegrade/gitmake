@@ -17,7 +17,9 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.sourcegrade.gitmake
+package org.sourcegrade.gitmake.template
+
+import org.sourcegrade.gitmake.ResolvedPlaceholder
 
 interface ReplacementNode {
     val name: String
