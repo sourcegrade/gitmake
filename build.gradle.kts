@@ -27,6 +27,12 @@ application {
     mainClass.set("org.sourcegrade.gitmake.MainKt")
 }
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(11))
+    }
+}
+
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "11"
     kotlinOptions.freeCompilerArgs = listOf("-Xcontext-receivers")
