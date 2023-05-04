@@ -1,1 +1,1 @@
-rootProject.name = "GitMake"
+rootProject.name = "gitmake"
