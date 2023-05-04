@@ -12,4 +12,4 @@ serialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1"
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
-shadow = { id = "com.github.johnrengelman.shadow", version = "7.1.2" }
+shadow = { id = "com.github.johnrengelman.shadow", version = "8.1.1" }
