@@ -1,5 +1,5 @@
 [versions]
-kotlin = "1.8.21"
+kotlin = "1.9.25"
 
 [libraries]
 inquirer = "com.github.kotlin-inquirer:kotlin-inquirer:0.1.0"
